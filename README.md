@@ -12,7 +12,7 @@ Este es mi portfolio de código abierto, donde muestro mis habilidades y proyect
 **Enlace del Repositorio**
 -------------------------
 
-* GitHub: [https://github.com/CodeF1ow/CodePortfolio](https://github.com/CodeF1ow/CodePortfolio)
+* [GitHib](https://github.com/CodeF1ow/CodePortfolio)
 
 
 **Colabora con nosotros**
@@ -31,8 +31,7 @@ Estamos emocionados por trabajar contigo en este proyecto. Si tienes alguna preg
 **Contacto**
 ----------
 
-* Correo electrónico: [email](https://github.com/CodeF1ow/CodePortfolio)
-* GitHub: [https://github.com/CodeF1ow/CodePortfolio](https://github.com/CodeF1ow/CodePortfolio)
+* Correo electrónico: [email](contacto@codef1ow.es)
 
 ¡Espero que disfrutes explorando mi portfolio! 😊
  
