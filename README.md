@@ -15,10 +15,6 @@ Este es mi portfolio de código abierto, donde muestro mis habilidades y proyect
 * [GitHib](https://github.com/CodeF1ow/CodePortfolio)
 
 
-**Colabora con nosotros**
--------------------------
-
-Estamos emocionados por trabajar contigo en este proyecto. Si tienes alguna pregunta o idea sobre cómo mejorar el código, no dudes en hacernos saber. Puedes contactarnos a través del correo electrónico [email](https://github.com/CodeF1ow/CodePortfolio) o creando un nuevo issue en GitHub.
 
 **Ejecutando la Aplicación React**
 -------------------------------
@@ -34,6 +30,11 @@ Estamos emocionados por trabajar contigo en este proyecto. Si tienes alguna preg
 * Correo electrónico: [email](contacto@codef1ow.es)
 
 ¡Espero que disfrutes explorando mi portfolio! 😊
+
+**Colabora**
+-------------------------
+
+Estamos emocionados por trabajar contigo en este proyecto. Si tienes alguna pregunta o idea sobre cómo mejorar el código, no dudes en hacernos saber. Puedes contactarnos a través del correo electrónico [email](contacto@codef1ow.es) o creando un nuevo issue en GitHub.
  
 **Licencia**
 ------------
