@@ -78,28 +78,30 @@ button:focus {
 
 /* --------- */
 /* Navbar Section  */
-/* --------- */
+/* --------- *//* Header */
 .sticky {
   background-color: #1b1a2ea9 !important;
-  transition: all 0.3s ease-out 0s !important;
+  transition: All 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
-}
-
-.navbar {
-  position: fixed !important;
-  transition: all 0.3s ease-out 0s !important;
+  position: fixed !important; /* Cambia a position: fixed para que el header esté fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+ }
+ 
+ .navbar {
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
-}
-
-.navbar-toggler {
+ }
+ 
+ .navbar-toggler {
   position: relative !important;
   background-color: transparent !important;
   border-color: transparent !important;
-}
-
-.navbar-toggler span {
+ }
+ 
+ .navbar-toggler span {
   display: block !important;
   background-color: #be50f4 !important;
   height: 4px !important;
@@ -109,89 +111,86 @@ button:focus {
   transform: rotate(0deg) !important;
   left: 0 !important;
   opacity: 1 !important;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
+ }
+ 
+ .navbar-toggler:focus,
+ .navbar-toggler:active {
   outline: 0 !important;
-}
-
-.navbar-toggler span:nth-child(1),
-.navbar-toggler span:nth-child(3) {
+ }
+ 
+ .navbar-toggler span:nth-child(1),
+ .navbar-toggler span:nth-child(3) {
   transition: transform 0.35s ease-in-out !important;
   transition: transform 0.35s ease-in-out !important;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(1) {
+ }
+ 
+ .navbar-toggler:not(.collapsed) span:nth-child(1) {
   position: absolute !important;
   left: 12px !important;
   top: 10px !important;
   transform: rotate(135deg) !important;
   opacity: 0.9 !important;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(2) {
+ }
+ 
+ .navbar-toggler:not(.collapsed) span:nth-child(2) {
   height: 12px !important;
   visibility: hidden !important;
   background-color: transparent !important;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
+ }
+ 
+ .navbar-toggler:not(.collapsed) span:nth-child(3) {
   position: absolute !important;
   left: 12px !important;
   top: 10px !important;
   transform: rotate(-135deg) !important;
   opacity: 0.9 !important;
-}
-
-@media (max-width: 767px) {
+ }
+ 
+ @media (max-width: 767px) {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
   }
-  .navbar-nav .nav-item a::after {
-    display: none !important;
-  }
-}
-.navbar-brand {
+ }
+ 
+ .navbar-brand {
   color: rgb(250, 250, 250) !important;
-}
-
-.logo {
+ }
+ 
+ .logo {
   height: 1.4em !important;
   width: 2.5em !important;
-}
-
-.navbar-nav .nav-link {
+ }
+ 
+ .navbar-nav .nav-link {
   color: white !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
-}
-
-.nav-link {
+ }
+ 
+ .nav-link {
   padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 767px) {
+ }
+ 
+ @media (max-width: 767px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
   }
-}
-
-.navbar-nav .nav-item {
+ }
+ 
+ .navbar-nav .nav-item {
   position: relative;
   margin-left: 20px;
-}
-
-.navbar-nav .nav-item a {
+ }
+ 
+ .navbar-nav .nav-item A {
   font-weight: 400;
-  transition: all 0.3s ease-out 0s;
+  transition: All 0.3s ease-out 0s;
   position: relative;
   z-index: 1;
-}
+ }
 
-.navbar-nav .nav-item a::after {
+ .navbar-nav .nav-item A::after {
   content: "";
   position: relative;
   display: block;
@@ -202,10 +201,10 @@ button:focus {
   bottom: 1px;
   left: 0;
   z-index: -1;
-  transition: all 0.3s ease-out 0s;
+  transition: All 0.3s ease-out 0s;
 }
 
-.navbar-nav .nav-item a:hover::after {
+ .navbar-nav .nav-item A:hover::after {
   width: 100%;
 }
 
@@ -405,31 +404,40 @@ button:focus {
   color: #700c86 !important;
 }
 
-/* --------- */
 /* Footer */
-/* --------- */
 .footer {
   background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  position: fixed; /* Cambia a position: fixed para que el footer esté fijo en la pantalla */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
+
 .footer-copywright {
-  text-align: center !important;
+  text-align: center;
 }
 
 .footer-body {
   z-index: 1;
-  text-align: center !important;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
   .footer-copywright {
     text-align: center !important;
   }
-
   .footer-body {
     text-align: center !important;
+  }
+}
+
+/* Ajuste de tamaño del footer en dispositivos móviles */
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 5px;
+    padding-bottom: 3px;
   }
 }
 
@@ -439,6 +447,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -446,8 +455,9 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color: #A588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -618,11 +628,9 @@ button:focus {
 /* --------- */
 
 .resume-section {
-  position: relative !important;
-  padding-top: 110px !important;
-  padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+  max-width: 800px;
 }
 
 .resume {

@@ -1,51 +1,85 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/oscar_cv.pdf";
+import pdf from "../../Assets/oscar_cv.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
+import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const handleResize = () => {};
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Añade el parámetro #zoom=80 a la URL del PDF
+  const pdfUrl = `${pdf}#zoom=80`;
 
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container fluid className="resume-section" style={{ marginTop: "100px" }}>
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={pdfUrl}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{
+              maxWidth: "150px", 
+              marginTop: "20px",
+              padding: "10px 10px", 
+              fontSize: "14px", 
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <AiOutlineDownload />
-            &nbsp;Descargar CV
+            <span className="download-btn__icon" style={{ marginRight: "5px" }}>
+              <AiOutlineDownload />
+            </span>
+            <span className="download-btn__text">Descargar CV</span>
           </Button>
         </Row>
-
-        <Row className="resume" style={{ justifyContent: "center" }}>
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+        <Row
+          className="pdf"
+          style={{
+            justifyContent: "center",
+            position: "relative",
+            marginTop: "20px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%",
+            }}
+          >
+            <iframe src={pdfUrl} title="Curriculum Oscar" width="100%" height="700px" />
+          </div>
         </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row style={{ justifyContent: "center", position: "relative", marginTop: "20px" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={pdfUrl}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{
+              maxWidth: "150px", // Reduce el ancho del botón
+              marginTop: "2px",
+              padding: "10px 10px", // Ajusta el padding para que sea más pequeño
+              fontSize: "14px", // Reduce el tamaño de la fuente
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <AiOutlineDownload />
-            &nbsp;Descargar CV
+            <AiOutlineDownload style={{ marginRight: "5px" }} />
+            Descargar CV
           </Button>
         </Row>
       </Container>
