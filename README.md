@@ -38,5 +38,4 @@ Estamos emocionados por trabajar contigo en este proyecto. Si tienes alguna preg
  
 **Licencia**
 ------------
-
-Este proyecto está bajo licencia MIT, lo que significa que puedes usar, modificar y compartir el código de manera gratuita.
+Este proyecto está bajo la [Licencia MIT](LICENSE).
